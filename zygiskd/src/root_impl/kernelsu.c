@@ -73,7 +73,7 @@ void ksu_get_existence(struct root_impl_state *state) {
     prctl(KSU_INSTALL_MAGIC1, CMD_GET_VERSION, &version, 0, &reply_ok);
 
     if (version == 0) state->state = Abnormal;
-    else if (version >= MIN_KSU_VERSION) {
+    else if (version >= MIN_KSU_VERSION && version <= MAX_KSU_VERSION) {
       /* INFO: Some custom kernels for custom ROMs have pre-installed KernelSU.
               Some users don't want to use KernelSU, but, for example, Magisk.
               This if allows this to happen, as it checks if "ksud" exists,

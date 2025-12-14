@@ -34,6 +34,7 @@ val CStandardFlags = arrayOf(
   "-Wno-fixed-enum-extension", "-Wno-unknown-warning-option", "-Wno-c23-extensions",
   "-Wconversion", "-Iroot_impl", "-llog", "-DMIN_APATCH_VERSION=$minAPatchVersion",
   "-DMIN_KSU_VERSION=$minKsuVersion",
+  "-DMAX_KSU_VERSION=$maxKsuVersion",
   "-DMIN_MAGISK_VERSION=$minMagiskVersion",
   "-DZKSU_VERSION=\"$verName\""
 )
